@@ -15,4 +15,8 @@ public class CarController {
 	public ModelAndView getAllCar() {
 		return new ModelAndView("home", "cars", carService.getAllCars());
 	}
+	@GetMapping("/get")
+	public ModelAndView getAllCa() {
+		return new ModelAndView("view");
+	}
 }
