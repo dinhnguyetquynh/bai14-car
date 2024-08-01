@@ -8,7 +8,7 @@ import com.demo.car.entity.Car;
 @Repository
 public interface CarDao {
 	public List<Car> getAllCars();
-	public Car addCar(Car car);
+	public void addCar(Car car);
 	public String deleteCar(int id);
 	public Car findCarById(int id);
 	public Car updateCar(Car car);

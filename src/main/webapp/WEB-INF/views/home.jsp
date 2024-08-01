@@ -9,6 +9,7 @@
 <title>Car List</title>
 </head>
 <body>
+	<a href="/bai14-car/form-add">Add Car</a>
     <table>
         <thead>
             <tr>

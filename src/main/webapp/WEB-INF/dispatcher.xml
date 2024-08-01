@@ -54,5 +54,11 @@
     
     <!-- Enable annotation-driven MVC -->
     <mvc:annotation-driven />
+     <!-- Khai báo bean xử lý multipart -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- Thiết lập kích thước tối đa cho file upload -->
+        <property name="maxUploadSize" value="10000000" />
+    </bean>
+
     
 </beans>

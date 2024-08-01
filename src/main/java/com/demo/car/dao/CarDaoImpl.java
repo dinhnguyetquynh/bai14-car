@@ -22,11 +22,11 @@ public class CarDaoImpl implements CarDao{
 		Query<Car> query = session.createQuery("from Car", Car.class);
 		return query.getResultList();
 	}
-
+	@Transactional
 	@Override
-	public Car addCar(Car car) {
-		// TODO Auto-generated method stub
-		return null;
+	public void addCar(Car car) {
+		Session session = factory.getCurrentSession();
+		session.save(car);
 	}
 
 	@Override
