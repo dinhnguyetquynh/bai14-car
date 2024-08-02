@@ -9,7 +9,8 @@ import com.demo.car.entity.Car;
 public interface CarDao {
 	public List<Car> getAllCars();
 	public void addCar(Car car);
-	public String deleteCar(int id);
+	public void deleteCar(int id);
 	public Car findCarById(int id);
-	public Car updateCar(Car car);
+	public void updateCar(Car car);
+	
 }

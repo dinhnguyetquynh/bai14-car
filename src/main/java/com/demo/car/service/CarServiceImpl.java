@@ -24,21 +24,21 @@ public class CarServiceImpl implements CarService {
 	}
 
 	@Override
-	public String deleteCar(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	public void deleteCar(int id) {
+		carDao.deleteCar(id);
 	}
 
 	@Override
 	public Car findCarById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return carDao.findCarById(id);
 	}
 
 	@Override
-	public Car updateCar(Car car) {
-		// TODO Auto-generated method stub
-		return null;
+	public void updateCar(Car car) {
+		carDao.updateCar(car);
+		
 	}
+
+
 
 }

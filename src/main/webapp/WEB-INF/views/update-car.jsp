@@ -10,7 +10,7 @@
 
     <div id="dvPreview1"></div>
 
-    <form:form action="savefile" method="post" enctype="multipart/form-data">
+    <form:form action="update-car" method="post" enctype="multipart/form-data">
         <table>
             <tr>
                 <td>Name</td>
@@ -33,9 +33,8 @@
                 <td><input type="file" name="file" id="fileToUpload"/></td>
             </tr>
         </table>
-        <input type="submit" value="Add"/>
+        <input type="submit" value="Update"/>
     </form:form>
-    
     <c:if test="${not empty filesuccess}">
         <p>${filesuccess}</p>
     </c:if>

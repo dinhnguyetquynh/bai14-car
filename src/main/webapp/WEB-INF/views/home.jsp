@@ -19,10 +19,19 @@
                 <th>Model Year</th>
                 <th>Description</th>
                 <th>Image</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
             <c:forEach items="${cars}" var="car">
+            	<c:url var="deleteLink" value="/delete-car">
+					<c:param name="carId" value="${car.carId}"></c:param>
+				</c:url>
+				
+				<c:url var="updateLink" value="/form-update-car">
+					<c:param name="carId" value="${car.carId}"></c:param>
+				</c:url>
+				
                 <tr>
                     <td>${car.carId}</td>
                     <td>${car.name}</td>
@@ -31,6 +40,10 @@
                     <td>${car.carDes}</td>
                     <td>
                         <img src="${pageContext.request.contextPath}/${car.imgURL}" alt="${car.name}" width="100" height="100"/>
+                    </td>
+                    <td>
+                    	<a href="${updateLink}">Update</a>
+                    	<a href="${deleteLink}">Delete</a>
                     </td>
                 </tr>
             </c:forEach>
